@@ -87,6 +87,7 @@ services:
       --mysql-native-password=on
       --tls_version="TLSv1.2,TLSv1.3"
       --init-file /data/application/init.sql
+      --binlog_expire_logs_seconds=604800
     ports:
       - ${MYSQL_PORT:-3306}:3306
     volumes:
